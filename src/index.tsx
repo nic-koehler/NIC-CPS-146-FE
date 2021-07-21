@@ -11,7 +11,7 @@ import { GoogleReCaptchaProvider } from 'react-google-recaptcha-v3';
 ReactDOM.render(
   <React.StrictMode>
     <GoogleReCaptchaProvider
-      reCaptchaKey="6LexUakbAAAAAEahnjiit2Ta9oucq1rZosCs017m"
+      reCaptchaKey={process.env.REACT_APP_RECAPTCHA_KEY}
       scriptProps={{
         async: false, // optional, default to false,
         defer: false, // optional, default to false

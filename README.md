@@ -7,6 +7,9 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 You need to set `REACT_APP_BACKEND_URL` with the URL of the
 corresponding backend service.
 
+`REACT_APP_RECAPTCHA_KEY` needs to have the reCAPTCHA key used to validate
+certain requests.
+
 ## Available Scripts
 
 In the project directory, you can run:
