@@ -18,6 +18,7 @@ import MySQLAccountVerify from './MySQLAccountVerify';
 // initialize ReactGA
 const trackingId = process.env.REACT_APP_GAID || ''; // Replace with your Google Analytics tracking ID
 ReactGA.initialize(trackingId);
+ReactGA.pageview(window.location.pathname);
 
 // set up history
 const history = createBrowserHistory();
