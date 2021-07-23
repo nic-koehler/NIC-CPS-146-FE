@@ -1,4 +1,5 @@
 import React, { useState, FormEvent } from 'react';
+import ReactGA from 'react-ga';
 import {
   useGoogleReCaptcha
 } from 'react-google-recaptcha-v3';
@@ -24,6 +25,10 @@ function MySQLAccount() {
       e.preventDefault();
       const element = e.currentTarget as HTMLFormElement;
       if ( element.checkValidity() ) {
+        ReactGA.event({
+          category: "Request",
+          action: "Add",
+        });
         setDisableButton( true );
         let token = '';
         if ( executeRecaptcha ) {

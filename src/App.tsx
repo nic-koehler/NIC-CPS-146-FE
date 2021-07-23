@@ -1,9 +1,11 @@
 import React from 'react';
+import ReactGA from 'react-ga';
+import { createBrowserHistory } from 'history';
 import './App.css';
 
 import {
-  BrowserRouter as Router,
-//  Router,
+//  BrowserRouter as Router,
+  Router,
   Switch,
   Route,
   Link
@@ -13,9 +15,21 @@ import Home from './Home';
 import MySQLAccount from './MySQLAccount';
 import MySQLAccountVerify from './MySQLAccountVerify';
 
+// initialize ReactGA
+const trackingId = process.env.REACT_APP_GAID || ''; // Replace with your Google Analytics tracking ID
+ReactGA.initialize(trackingId);
+
+// set up history
+const history = createBrowserHistory();
+
+// Initialize google analytics page view tracking
+history.listen(location => {
+  ReactGA.pageview(location.pathname); // Record a pageview for the given page
+});
+
 function App() {
   return (
-    <Router>
+    <Router history={history}>
       <main>
         <nav className="navbar navbar-expand navbar-dark bg-dark" aria-label="Second navbar example">
           <div className="container-fluid">

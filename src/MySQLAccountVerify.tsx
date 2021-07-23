@@ -1,4 +1,5 @@
 import React, { useEffect, useState, FormEvent } from 'react';
+import ReactGA from 'react-ga';
 
 interface VerifyProps {
   match: {
@@ -50,6 +51,10 @@ function MySQLAccountVerify(props: VerifyProps) {
       e.preventDefault();
       const element = e.currentTarget as HTMLFormElement;
       if ( element.checkValidity() ) {
+        ReactGA.event({
+          category: "Account",
+          action: operation,
+        });
         setDisableButton( true );
         element.classList.remove('was-validated');
         fetch(

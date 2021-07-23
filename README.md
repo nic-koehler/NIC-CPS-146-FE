@@ -10,6 +10,8 @@ corresponding backend service.
 `REACT_APP_RECAPTCHA_KEY` needs to have the reCAPTCHA key used to validate
 certain requests.
 
+`REACT_APP_GAID` needs to have the Google Analytics Universal ID.
+
 ## Available Scripts
 
 In the project directory, you can run:
