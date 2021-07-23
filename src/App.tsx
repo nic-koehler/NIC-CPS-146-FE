@@ -19,7 +19,7 @@ function App() {
       <main>
         <nav className="navbar navbar-expand navbar-dark bg-dark" aria-label="Second navbar example">
           <div className="container-fluid">
-            <Link className="navbar-brand" to="/">NIC CPS 146</Link>
+            <Link className="navbar-brand" to="/">NIC Koehler</Link>
             <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample02" aria-controls="navbarsExample02" aria-expanded="false" aria-label="Toggle navigation">
               <span className="navbar-toggler-icon"></span>
             </button>

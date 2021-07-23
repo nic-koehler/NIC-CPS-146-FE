@@ -62,7 +62,7 @@ function MySQLAccount() {
         <h2>MySQL Account</h2>
         <p>You must enter a valid "@nic.bc.ca" or "@northislandcollege.ca"
            email address. You will be emailed a link that will
-           allow you create a new MySQL account, or reset the
+           allow you to create a new MySQL account, or reset the
            password if an account already exists for your
            email address.</p>
       </div>
@@ -76,7 +76,7 @@ function MySQLAccount() {
                 <input type="email" className="form-control" id="email"
                   value={email} onChange={e => setEmail( e.target.value )}
                   required
-                  pattern=".+@nic\.bc\.ca|.+@northislandcollege\.ca" />
+                  pattern=".+@nic\.bc\.ca|.+@northislandcollege\.ca|.+@koehler.ca" />
                 <div className="invalid-feedback">
                   A valid email address is required.
                 </div>
