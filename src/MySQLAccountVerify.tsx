@@ -142,7 +142,7 @@ function MySQLAccountVerify(props: VerifyProps) {
     <div>
       <div className="py-5">
         <h2>{operation} MySQL Account</h2>
-        <p>For account: {email}.</p>
+        <p>For email address: {email}.</p>
       </div>
 
       <div className="row">
