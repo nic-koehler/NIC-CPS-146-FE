@@ -13,7 +13,9 @@ import {
 
 import Home from './Home';
 import MySQLAccount from './MySQLAccount';
+import MatrixAccount from './MatrixAccount';
 import MySQLAccountVerify from './MySQLAccountVerify';
+import MatrixAccountVerify from './MatrixAccountVerify';
 
 // initialize ReactGA
 const trackingId = process.env.REACT_APP_GAID || ''; // Replace with your Google Analytics tracking ID
@@ -45,14 +47,22 @@ function App() {
                   <Link className="nav-link" to="/create-mysql-account">
                     MySQL Account</Link>
                 </li>
+                <li className="nav-item">
+                  <Link className="nav-link" to="/create-matrix-account">
+                    Matrix Account</Link>
+                </li>
               </ul>
             </div>
           </div>
         </nav>
         <Switch>
-          <Route path="/verify-mysql-account/:token" component={MySQLAccountVerify} />
+          <Route path="/verify-MySQL-account/:token" component={MySQLAccountVerify} />
+          <Route path="/verify-Matrix-account/:token" component={MatrixAccountVerify} />
           <Route path="/create-mysql-account">
             <MySQLAccount />
+          </Route>
+          <Route path="/create-matrix-account">
+            <MatrixAccount />
           </Route>
           <Route path="/">
             <Home />
